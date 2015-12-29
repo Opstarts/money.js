@@ -3,17 +3,19 @@
 	"description" : "JavaScript currency conversion library.",
 	"homepage": "https://github.com/ducdigital/money.js",
 	"keywords" : ["money", "fx", "currency", "convert", "conversion", "exchange", "rate", "utilities", "accounting", "number", "cart", "ecommerce"],
-	"author": "Open Exchange Rates <info@openexchangerates.org> (https://www.openexchangerates.org)",
+	"author": "Duc Ta <duc@ducdigital.com> (http://www.duc.io)",
 	"contributors" : [
 		"Open Exchange Rates <info@openxchangerates.org> (https://openexchangerates.org)",
-		"Joss Crowcroft <josscrowcroft@gmail.com> (http://www.josscrowcroft.com)"
+		"Joss Crowcroft <josscrowcroft@gmail.com> (http://www.josscrowcroft.com)",
+		"Duc Ta <duc@ducdigital.com> (http://www.duc.io)"
 	],
+	"license": "MIT",
 	"dependencies" : {},
 	"devDependencies": {
 		"mocha": "^2.3.x",
 		"chai": "^2.1.x"
 	},
-	"repository" : {"type": "git", "url": "git://github.com/openexchangerates/money.js.git"},
+	"repository" : {"type": "git", "url": "git://github.com/ducdigital/money.js.git"},
 	"main" : "money.js",
 	"version" : "0.3.0",
 	"scripts": {
