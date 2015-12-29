@@ -1,7 +1,9 @@
 
 # money.js / fx()
 
-This is a Fork of **[money.js](http://openexchangerates.github.io/money.js/)**.
+[![Build Status](https://travis-ci.org/ducdigital/money.js.svg?branch=master)](https://travis-ci.org/ducdigital/money.js)
+
+This is a fork of **[money.js](http://openexchangerates.github.io/money.js/)**.
 
 It was fork to merge several PR that important but was ignored by the author of money.js.
 For detailed change log, please scroll down to the Changelog section.
@@ -24,6 +26,24 @@ fx(5318008).convert();
 // Supports nodeJS / AMD:
 var fx = require('money');
 require(["money"], function(fx) { /* ... */ });
+```
+
+## Additional features:
+
+- New instance of money.js. `fx.factory()`
+```javascript
+var fx = require('money');
+var newFxInstance = fx.factory();
+
+console.log(fx === newFxInstance) // false
+```
+
+- Get rate between currencies `fx.getRate(to, from)`
+```javascript
+var fx = require('money');
+fx.rates = { 'USD': 1, 'EUR': 0.5, 'GBP': 0.4 };
+
+console.log(fx.getRate('EUR', 'GBP')); // 0.8
 ```
 
 ## Changelog
