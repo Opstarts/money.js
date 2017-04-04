@@ -9,7 +9,7 @@
 		"Joss Crowcroft <josscrowcroft@gmail.com> (http://www.josscrowcroft.com)"
 	],
 	"dependencies" : {},
-	"repository" : {"type": "git", "url": "git://github.com/openexchangerates/money.js.git"},
+	"repository" : {"type": "git", "url": "git@github.com:Opstarts/money.js.git"},
 	"main" : "money.js",
-	"version" : "0.2.0"
+	"version" : "0.2.1"
 }
