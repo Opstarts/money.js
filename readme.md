@@ -1,13 +1,12 @@
-# money.js / fx() 
 
-Simple and tiny JavaScript library for realtime currency conversion and exchange rate calculation, from any currency, to any currency. 
+# money.js / fx()
 
-**money.js** is lightweight, has no dependencies, and works great client-side or server-side. Use standalone or as a nodeJS/npm and AMD/requireJS module.
+[![Build Status](https://travis-ci.org/ducdigital/money.js.svg?branch=master)](https://travis-ci.org/ducdigital/money.js)
 
-Designed for seamless integration with the **[Open Exchange Rates API](https://openexchangerates.org "Free reliable exchange rates/currency conversion data API")**, but can be integrated with any source of currency data or with static/cached/approximate exchange rates.
+This is a fork of **[money.js](http://openexchangerates.github.io/money.js/)**.
 
-Visit the plugin homepage for demos and documentation: **http://openexchangerates.github.io/money.js/**
-
+It was fork to merge several PR that important but was ignored by the author of money.js.
+For detailed change log, please scroll down to the Changelog section.
 
 ## Quick Examples:
 
@@ -29,7 +28,31 @@ var fx = require('money');
 require(["money"], function(fx) { /* ... */ });
 ```
 
+## Additional features:
+
+- New instance of money.js. `fx.factory()`
+```javascript
+var fx = require('money');
+var newFxInstance = fx.factory();
+
+console.log(fx === newFxInstance) // false
+```
+
+- Get rate between currencies `fx.getRate(to, from)`
+```javascript
+var fx = require('money');
+fx.rates = { 'USD': 1, 'EUR': 0.5, 'GBP': 0.4 };
+
+console.log(fx.getRate('EUR', 'GBP')); // 0.8
+```
+
 ## Changelog
+**0.3**
+* Factory for money.js. Allow create multiple instance of money.js in the same app. Thanks @starsirius: (https://github.com/starsirius/money.js/commit/a736a83912d7f62f360f8d623c785f148e8f50d4)
+* Proper error message instead of showing `fx error`. Thanks @sliptree:  (https://github.com/sliptree/money.js/commit/c76476456f1acef18c0b2441d36de3f55ae3650b)
+* Unit test. Inpired by (@PierrickP)(https://github.com/PierrickP/money.js/commit/b2b5e32b2b0cbf13a334e4590b3ac2356c545b89)
+* Expose `fx.getRate(to, from)` allow getting rate from any 2 currencies. Inspired by (@thewarpaint): (https://github.com/thewarpaint/money.js/commit/85eed2df55c3022ac6fe7fe83911ecf2a2b8a25d)
+* Fix small bug cause value not passed to `getRate()`
 
 **0.2**
 * Now maintained by Open Exchange Rates
