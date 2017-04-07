@@ -16,16 +16,26 @@
     "cart",
     "ecommerce"
   ],
-  "author": "Open Exchange Rates <info@openexchangerates.org> (https://www.openexchangerates.org)",
+  "author": "Duc Ta <duc@ducdigital.com> (http://www.duc.io)",
   "contributors": [
     "Open Exchange Rates <info@openxchangerates.org> (https://openexchangerates.org)",
-    "Joss Crowcroft <josscrowcroft@gmail.com> (http://www.josscrowcroft.com)"
+    "Joss Crowcroft <josscrowcroft@gmail.com> (http://www.josscrowcroft.com)",
+    "Duc Ta <duc@ducdigital.com> (http://www.duc.io)",
+    "Billy Vong <billy@opstarts.com> (https://opstarts.com)"
   ],
+  "license": "MIT",
   "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.3.x",
+    "chai": "^2.1.x"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:Opstarts/money.js.git"
   },
   "main": "money.js",
-  "version": "0.2.3"
+  "version": "0.3.1",
+  "scripts": {
+    "test": "mocha --reporter spec tests"
+  }
 }
